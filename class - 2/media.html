@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media QUery</title>
+    <style>
+        div {
+            background-color: red;
+            color: white;
+            font-size: 20px;
+            padding: 10px;
+            text-align: center;
+        }
+
+        /* @media (condition){
+
+        } */
+
+
+        @media (max-width: 546px) {
+            div {
+                background-color: blue;
+            }
+        }
+
+        @media (min-width: 547px) and (max-width: 768px) {
+            div {
+                background-color: green;
+            }
+        }
+
+        @media (min-width: 768px) and (max-width: 992px) {
+            div {
+                background-color: yellow;
+            }
+        }
+
+        @media (min-width: 992px) and (max-width: 1200px) {
+            div {
+                background-color: orange;
+            }
+        }
+
+        @media (min-width: 1200px) {
+            div {
+                background-color: rebeccapurple;
+            }
+        }
+
+        @media (orientation: landscape) {
+            div {
+                background-color: pink;
+            }
+        }
+
+        @media (orientation: portrait) {
+            div {
+                background-color: rgb(44, 255, 12);
+            }
+        }
+
+        @media print {
+            div {
+                color: red
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div>Vijay</div>
+
+</body>
+
+</html>

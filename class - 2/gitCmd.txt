@@ -1,0 +1,8 @@
+git init -> initiale in ur
+git add <filename></filename> -> paarticular file alone
+git add .
+git commit -m ""
+git branch -m branch_name
+git add remote origin https://github.com/Vijayanandr2000/EMC--B18.git -> 1st time alone
+
+git push -> git push --set-upstream origin main
