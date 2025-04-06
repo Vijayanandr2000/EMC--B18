@@ -6,3 +6,7 @@ git branch -m branch_name
 git add remote origin https://github.com/Vijayanandr2000/EMC--B18.git -> 1st time alone
 
 git push -> git push --set-upstream origin main
+
+
+git fetch ->  new changes which is branch created
+git pull -> brnach code also bring update 
