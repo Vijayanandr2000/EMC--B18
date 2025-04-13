@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+
+    <style>
+        .grid-container {
+            display: grid;
+            gap: 10px;
+            grid-template-areas:
+                "parking entrance spl-entrance"
+                "empty entrance spl-entrance1"
+                "br1 hall kitchen"
+                "br1 br2 staircase"
+            ;
+            height: 90vh;
+        }
+
+        .parking {
+            grid-area: parking;
+        }
+
+        .empty {
+            grid-area: empty;
+            display: none;
+        }
+
+        .entrance {
+            grid-area: entrance;
+        }
+
+        .spl-entrance {
+            grid-area: spl-entrance;
+        }
+
+        .spl-entrance1 {
+            grid-area: spl-entrance1;
+        }
+
+        .br1 {
+            grid-area: br1;
+        }
+
+        .hall {
+            grid-area: hall;
+        }
+
+        .kitchen {
+            grid-area: kitchen;
+        }
+
+        .br2 {
+            grid-area: br2;
+        }
+
+        .staircase {
+            grid-area: staircase;
+        }
+
+        .grid-item {
+            background-color: lightcoral;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid-container">
+        <div class="grid-item parking">Parking</div>
+        <div class="grid-item empty"></div>
+        <div class="grid-item entrance">Entrance</div>
+        <div class="grid-item spl-entrance">Spl - Entrance</div>
+        <div class="grid-item spl-entrance1">Spl - Entrance1</div>
+        <div class="grid-item br1">BR-1</div>
+        <div class="grid-item hall">Hall</div>
+        <div class="grid-item kitchen">Kitchen</div>
+        <div class="grid-item br2">BR-2</div>
+        <div class="grid-item staircase">Staircase</div>
+    </div>
+
+</body>
+
+</html>
