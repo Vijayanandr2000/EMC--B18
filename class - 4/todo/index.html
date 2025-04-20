@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do</title>
+</head>
+
+<body>
+    <section class="head">
+        <h1>To do</h1>
+
+        <input type="text" placeholder="Add a new task" id="inputValue" />
+        <button onclick="addList()">ADD</button>
+    </section>
+
+    <section class="body">
+        <ul id="taskList"></ul>
+    </section>
+
+
+    <script>
+        const input = document.getElementById("inputValue");
+        const ul = document.getElementById("taskList");
+
+
+        function addList() {
+            const inputValue = input.value
+
+            //li create
+            const li = document.createElement("li");
+            li.innerText = inputValue;
+
+            //li delete
+            const deleteBtn = document.createElement("button");
+            deleteBtn.innerText = "Delete";
+
+            deleteBtn.addEventListener("click", function () {
+                li.remove();
+            })
+
+            li.appendChild(deleteBtn);
+            ul.appendChild(li);
+
+            input.value = ""
+        }
+
+    </script>
+
+</body>
+
+</html>
