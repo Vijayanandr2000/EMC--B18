@@ -8,6 +8,8 @@ const SignUp = () => {
     password: "",
   });
 
+  const [messasge, setMessage] = useState();
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -21,11 +23,26 @@ const SignUp = () => {
       },
     });
     const resData = await response.json();
-    console.log(resData);
+
+    if (response.ok) {
+      setMessage({
+        status: "success",
+        message: resData.message,
+      });
+      return;
+    }
+
+    setMessage({
+      status: "error",
+      message: resData.message,
+    });
   };
 
   return (
     <form onSubmit={handleSubmit}>
+      {messasge?.status && (
+        <h2 className={messasge.status}>{messasge.message}</h2>
+      )}
       <input
         type="email"
         placeholder="Enter your email"
